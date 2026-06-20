@@ -1,0 +1,417 @@
+// ============================================
+// LUX WATCHES - Premium Luxury Watch Website
+// ============================================
+
+// ---- VARIABLES ----
+$primary-dark: #0a0a0a;
+$secondary-dark: #1a1a1a;
+$accent-gold: #d4af37;
+$accent-silver: #e8e8e8;
+$accent-platinum: #b0b0b0;
+$text-primary: #f5f5f5;
+$text-secondary: #a0a0a0;
+
+// ---- GLOBAL STYLES ----
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: $primary-dark;
+    color: $text-primary;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+// ---- NAVIGATION ----
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba($primary-dark, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba($accent-gold, 0.1);
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: $accent-gold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+
+    a {
+        color: $text-primary;
+        text-decoration: none;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $accent-gold;
+        }
+    }
+}
+
+// ---- HERO SECTION ----
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 1400px;
+    gap: 4rem;
+    padding: 2rem;
+    align-items: center;
+}
+
+.canvas-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background: radial-gradient(circle at 30% 40%, rgba($accent-gold, 0.05), transparent);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    background: linear-gradient(135deg, $accent-gold, $accent-silver);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: $accent-gold;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.hero-description {
+    font-size: 1rem;
+    color: $text-secondary;
+    max-width: 500px;
+    line-height: 1.8;
+}
+
+.cta-button {
+    align-self: flex-start;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, $accent-gold, $accent-platinum);
+    color: $primary-dark;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba($accent-gold, 0.2);
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba($accent-gold, 0.3);
+    }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: $text-secondary;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+
+    span {
+        display: block;
+        animation: bounce 2s infinite;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+// ---- CRAFTSMANSHIP SECTION ----
+.craftsmanship {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, $accent-gold, $accent-silver);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: $text-secondary;
+        letter-spacing: 0.5px;
+    }
+}
+
+.craftsmanship-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.craft-card {
+    background: linear-gradient(135deg, rgba($accent-gold, 0.05), rgba($accent-silver, 0.05));
+    border: 1px solid rgba($accent-gold, 0.2);
+    padding: 2.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-10px);
+        border-color: $accent-gold;
+        box-shadow: 0 20px 40px rgba($accent-gold, 0.15);
+    }
+
+    .craft-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: $accent-gold;
+        margin-bottom: 1rem;
+        opacity: 0.8;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: $accent-silver;
+    }
+
+    p {
+        color: $text-secondary;
+        line-height: 1.8;
+    }
+}
+
+// ---- CONFIGURATOR SECTION ----
+.configurator {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.configurator-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.configurator-canvas {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(135deg, rgba($secondary-dark, 0.8), rgba($accent-gold, 0.03));
+    border: 1px solid rgba($accent-gold, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.configurator-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.control-group {
+    label {
+        display: block;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        color: $accent-gold;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+    }
+}
+
+.option-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+}
+
+.option-btn {
+    padding: 0.8rem 1.5rem;
+    background: rgba($accent-gold, 0.05);
+    border: 1px solid rgba($accent-gold, 0.2);
+    color: $text-primary;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+
+    &:hover {
+        border-color: $accent-gold;
+        background: rgba($accent-gold, 0.1);
+    }
+
+    &.active {
+        background: $accent-gold;
+        color: $primary-dark;
+        border-color: $accent-gold;
+        font-weight: 600;
+    }
+}
+
+.color-picker {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.color-btn {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba($accent-gold, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: $accent-gold;
+        transform: scale(1.1);
+        box-shadow: 0 0 15px rgba($accent-gold, 0.5);
+    }
+}
+
+// ---- CONTACT SECTION ----
+.contact {
+    padding: 6rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, $accent-gold, $accent-silver);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: $text-secondary;
+        margin-bottom: 2rem;
+    }
+}
+
+.contact-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    input {
+        padding: 1rem 1.5rem;
+        background: rgba($accent-gold, 0.05);
+        border: 1px solid rgba($accent-gold, 0.2);
+        border-radius: 50px;
+        color: $text-primary;
+        font-size: 1rem;
+        min-width: 300px;
+
+        &::placeholder {
+            color: $text-secondary;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $accent-gold;
+            background: rgba($accent-gold, 0.1);
+        }
+    }
+}
+
+// ---- FOOTER ----
+.footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba($accent-gold, 0.1);
+    color: $text-secondary;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+// ---- RESPONSIVE ----
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .configurator-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+}

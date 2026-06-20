@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUX WATCHES - Premium Luxury Timepieces</title>
+    <link rel="stylesheet" href="/src/styles/main.scss">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">LUX</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Showcase</a></li>
+                <li><a href="#craftsmanship">Craftsmanship</a></li>
+                <li><a href="#configurator">Configurator</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with 3D Watch -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div id="canvas-container" class="canvas-container"></div>
+            <div class="hero-text">
+                <h1 class="hero-title">Luxury Redefined</h1>
+                <p class="hero-subtitle">Explore the pinnacle of horological craftsmanship</p>
+                <p class="hero-description">Every timepiece is a masterpiece of precision engineering and artistic excellence</p>
+                <button class="cta-button">Explore Collection</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Storytelling Section -->
+    <section id="craftsmanship" class="craftsmanship">
+        <div class="section-header">
+            <h2>The Art of Timekeeping</h2>
+            <p>Witness the meticulous process behind every luxury timepiece</p>
+        </div>
+        
+        <div class="craftsmanship-grid">
+            <div class="craft-card">
+                <div class="craft-number">01</div>
+                <h3>Design</h3>
+                <p>Precision engineering meets artistic vision in every sketch and blueprint</p>
+            </div>
+            <div class="craft-card">
+                <div class="craft-number">02</div>
+                <h3>Assembly</h3>
+                <p>Master craftsmen assemble intricate mechanisms with unparalleled precision</p>
+            </div>
+            <div class="craft-card">
+                <div class="craft-number">03</div>
+                <h3>Testing</h3>
+                <p>Rigorous quality control ensures every watch meets our exacting standards</p>
+            </div>
+            <div class="craft-card">
+                <div class="craft-number">04</div>
+                <h3>Finishing</h3>
+                <p>Final polish and inspection deliver a flawless luxury timepiece</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Configurator Section -->
+    <section id="configurator" class="configurator">
+        <div class="section-header">
+            <h2>Design Your Own</h2>
+            <p>Create your personalized luxury timepiece</p>
+        </div>
+        
+        <div class="configurator-container">
+            <div id="configurator-canvas" class="configurator-canvas"></div>
+            
+            <div class="configurator-controls">
+                <div class="control-group">
+                    <label>Case Material</label>
+                    <div class="option-buttons">
+                        <button class="option-btn active" data-material="steel">Stainless Steel</button>
+                        <button class="option-btn" data-material="titanium">Titanium</button>
+                        <button class="option-btn" data-material="rose-gold">Rose Gold</button>
+                        <button class="option-btn" data-material="platinum">Platinum</button>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label>Dial Color</label>
+                    <div class="color-picker">
+                        <button class="color-btn" style="background-color: #1a1a1a;" data-color="black" title="Midnight Black"></button>
+                        <button class="color-btn" style="background-color: #ffffff;" data-color="white" title="Pearl White"></button>
+                        <button class="color-btn" style="background-color: #0066cc;" data-color="blue" title="Deep Blue"></button>
+                        <button class="color-btn" style="background-color: #2d5016;" data-color="green" title="Forest Green"></button>
+                        <button class="color-btn" style="background-color: #8b0000;" data-color="burgundy" title="Burgundy"></button>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label>Strap Material</label>
+                    <div class="option-buttons">
+                        <button class="option-btn active" data-strap="leather">Leather</button>
+                        <button class="option-btn" data-strap="metal">Metal Bracelet</button>
+                        <button class="option-btn" data-strap="rubber">Rubber</button>
+                        <button class="option-btn" data-strap="fabric">Fabric</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-content">
+            <h2>Get in Touch</h2>
+            <p>Experience luxury. Schedule your private viewing today.</p>
+            <form class="contact-form">
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit" class="cta-button">Request Viewing</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 LUX WATCHES. All rights reserved. | Crafted for the discerning collector.</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

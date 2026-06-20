@@ -1,0 +1,23 @@
+{
+  "name": "lux-watches",
+  "version": "1.0.0",
+  "description": "Premium, immersive luxury watch website with interactive 3D visualization",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx"
+  },
+  "dependencies": {
+    "three": "^r128",
+    "gsap": "^3.12.2",
+    "lil-gui": "^0.19.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "eslint": "^8.50.0",
+    "sass": "^1.69.0"
+  }
+}
